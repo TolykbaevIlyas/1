@@ -1,0 +1,123 @@
+#include <iostream>
+using namespace std;
+
+void Piramide(int a) {
+    for (int  i = 0; i < a; i++)
+    {
+        for (int k = a; k > i; k--)
+        {
+            cout << " ";
+        }
+        for (int k = 0; k <= i; k++)
+        {
+            cout << "#";
+        }
+        for (int k = 0+1; k <= i; k++)
+        {
+            cout << "#";
+        }
+        cout << endl;
+    }
+}
+void OneAngle(int a) {
+    for (int i = 0; i < a; i++)
+    {
+        for (int k = 0; k <= i; k++)
+        {
+            cout << "#";
+        }
+        cout << endl;
+    }
+}
+void RevOneAngle(int a) {
+    for (int i = 0; i < a; i++)
+    {
+        for (int k = a; k > i; k--)
+        {
+            cout << "#";
+        }
+        cout << endl;
+    }
+}
+void Sticks(int a) {
+    for (int i = 0; i < a; i++)
+    {
+        for (int k = 0 + 1; k <= i; k++)
+        {
+            cout << " ";
+        }
+        cout << "#";
+        for (int r = a; r >= i; r--)
+        {
+            cout << " ";
+        }
+        for (int r = a; r >= i; r--)
+        {
+            cout << " ";
+        }
+        cout << "#";
+        cout << endl;
+    }
+}
+void Romb(int a) {
+    for (int i = 0; i < a; i++)
+    {
+        if (i <= (a / 2)) {
+            for (int k = a; k > i; k--)
+            {
+                cout << " ";
+            }
+            for (int k = 0; k <= i; k++)
+            {
+                cout << "#";
+            }
+            for (int k = 0 + 1; k <= i; k++)
+            {
+                cout << "#";
+            }
+            cout << endl;
+        }
+        if (i >= (a / 2)) {
+            for (int k = 0; k <= i; k++)
+            {
+                cout << " ";
+            }
+            for (int r = a - 2; r >= i; r--)
+            {
+                cout << "#";
+            }
+            for (int r = a -1 ; r >= i; r--)
+            {
+                cout << "#";
+            }
+            cout << endl;
+        }
+    }
+}
+void Rectangle(int a) {
+    for (int i = 0; i < a; i++)
+    {
+        for (int e = 0; e < (a / 2); e++)
+        {
+            cout << "# ";
+        }
+        cout << endl;
+    }
+}
+
+void main() {
+    setlocale(LC_ALL,"ru");
+    int a;
+    cin >> a;
+    Piramide(a);
+    cout << "\n";
+    OneAngle(a);
+    cout << "\n";
+    RevOneAngle(a);
+    cout << "\n";
+    Sticks(a);
+    cout << "\n";
+    Romb(a);
+    cout << "\n";
+    Rectangle(a);
+}
